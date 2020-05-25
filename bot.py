@@ -53,6 +53,30 @@ class wppbot:
         texto = post[ultimo].find_element_by_css_selector('span.selectable-text').text
         return texto
 
+    # def escutaUsuario(self):
+    #     post = self.driver.find_elements_by_class_name('_3_7SH')
+    #     ultimo = len(post) - 1
+    #     texto = ultimo.find_element_by_css_selector('_3FXB1').text
+    #     print(texto)
+        # self.caixa_de_mensagem = self.driver.find_element_by_class_name('_1Plpp')
+        # self.caixa_de_mensagem.send_keys(name)
+        # time.sleep(1)
+        # self.botao_enviar = self.driver.find_element_by_class_name('_35EW6')
+        # self.botao_enviar.click()
+        # time.sleep(1)
+        # return name
+
+    # def observar(self, ultimo):
+    #     while True:
+    #         texto = self.escuta()
+    #         if texto != ultimo:
+    #             ultimo = texto
+    #             texto = texto.lower()
+    #             self.bot.train(texto)
+    #             return ultimo
+    #         else:
+    #             ultimo = texto
+
     def aprender(self, ultimo, incial, final, erro):
         self.caixa_de_mensagem = self.driver.find_element_by_class_name('_1Plpp')
         self.caixa_de_mensagem.send_keys(incial)
